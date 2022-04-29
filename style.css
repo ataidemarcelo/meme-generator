@@ -44,11 +44,11 @@
   height: 500px;
 }
 
-.text {
+#meme-text {
   position: absolute;
-  font-size: 3rem;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
   color: white;
-  text-shadow: 3px 3px 2px gray;
 }
 
 #meme-image {

@@ -1,11 +1,10 @@
 console.log('Project Meme Generator!!!');
 
-const text = document.createElement('p');
+const text = document.getElementById('meme-text');
 
 function addText(textoDigitado) {
   const memeImageContainer = document.getElementById('meme-image-container');
   text.id = 'meme-text';
-  text.className = 'text';
 
   text.innerText = textoDigitado;
 
