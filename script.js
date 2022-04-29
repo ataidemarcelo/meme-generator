@@ -1,9 +1,9 @@
 console.log('Project Meme Generator!!!');
 
 const text = document.getElementById('meme-text');
+const memeImageContainer = document.getElementById('meme-image-container');
 
 function addText(textoDigitado) {
-  const memeImageContainer = document.getElementById('meme-image-container');
   text.id = 'meme-text';
 
   text.innerText = textoDigitado;
@@ -18,7 +18,6 @@ textInput.addEventListener('keyup', (event) => {
 
 function addImage() {
   const memeInsert = document.getElementById('meme-insert');
-  const memeImageContainer = document.getElementById('meme-image-container');
   const memeImage = document.getElementById('meme-image');
 
   const reader = new FileReader();
@@ -37,3 +36,35 @@ btnAddImage.addEventListener('click', (event) => {
 
   addImage();
 });
+
+function addBorderColor(color) {
+  switch (color) {
+  case 'rgb(255, 0, 0)':
+    memeImageContainer.style.border = `3px dashed ${color}`;
+    break;
+  case 'rgb(0, 0, 255)':
+    memeImageContainer.style.border = `5px double ${color}`;
+    break;
+  case 'rgb(0, 128, 0)':
+    memeImageContainer.style.border = `6px groove ${color}`;
+    break;
+  default:
+    console.log('Não deu!');
+  }
+}
+
+function getBorderColor() {
+  const btnsAddBorder = document.getElementsByClassName('btn-add-border');
+  for (let index = 0; index < btnsAddBorder.length; index += 1) {
+    btnsAddBorder[index].addEventListener('click', (event) => {
+      const element = event.target;
+      const cssObj = window.getComputedStyle(element, null);
+      const colorSelected = cssObj.getPropertyValue('background-color');
+
+      addBorderColor(colorSelected);
+      console.log(colorSelected);
+    });
+  }
+}
+
+getBorderColor();

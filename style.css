@@ -52,6 +52,25 @@
 }
 
 #meme-image {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-add-border {
+  padding: 6px 12px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.fire {
+  background-color: red;
+}
+
+.water {
+  background-color: blue;
+}
+
+.earth {
+  background-color: green;
 }
