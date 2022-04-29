@@ -34,10 +34,23 @@
 }
 
 .meme-image-container {
+  position: relative;
   border: 1px solid gray;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 500px;
+  height: 500px;
+}
+
+.text {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 3px 3px 2px gray;
+}
+
+#meme-image {
   width: 500px;
   height: 500px;
 }
