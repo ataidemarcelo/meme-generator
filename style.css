@@ -34,8 +34,9 @@
 }
 
 .meme-image-container {
+  background-color: white;
+  border: 1px solid black;
   position: relative;
-  border: 1px solid gray;
   display: flex;
   justify-content: center;
   align-items: center;
