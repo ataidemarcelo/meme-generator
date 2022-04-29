@@ -74,3 +74,21 @@
 .earth {
   background-color: green;
 }
+
+.img-memes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.img-memes {
+  width: 80px;
+  margin-left: 16px;
+}
+
+.img-memes > img {
+  width: 100%;
+  border-radius: 100%;
+  border: 2px solid indianred;
+}

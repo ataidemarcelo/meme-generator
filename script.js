@@ -16,18 +16,20 @@ textInput.addEventListener('keyup', (event) => {
   addText(event.target.value);
 });
 
+const memeImage = document.getElementById('meme-image');
 function addImage() {
   const memeInsert = document.getElementById('meme-insert');
-  const memeImage = document.getElementById('meme-image');
 
-  const reader = new FileReader();
+  if (memeInsert.src !== '') {
+    const reader = new FileReader();
 
-  reader.onload = () => {
-    memeImage.src = reader.result;
-  };
-  reader.readAsDataURL(memeInsert.files[0]);
+    reader.onload = () => {
+      memeImage.src = reader.result;
+    };
+    reader.readAsDataURL(memeInsert.files[0]);
 
-  memeImageContainer.appendChild(memeImage);
+    memeImageContainer.appendChild(memeImage);
+  }
 }
 
 const btnAddImage = document.getElementById('add-image');
@@ -62,9 +64,20 @@ function getBorderColor() {
       const colorSelected = cssObj.getPropertyValue('background-color');
 
       addBorderColor(colorSelected);
-      console.log(colorSelected);
+      // console.log(colorSelected);
     });
   }
 }
 
 getBorderColor();
+
+function getTheMemeReady() {
+  const imgs = document.querySelectorAll('.img-memes > img');
+  for (let index = 0; index < imgs.length; index += 1) {
+    imgs[index].addEventListener('click', (event) => {
+      memeImage.src = event.target.src;
+    });
+  }
+}
+
+getTheMemeReady();
