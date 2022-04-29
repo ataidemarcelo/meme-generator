@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1366px;
+  height: 100vh;
+  margin: auto;
+  padding: 0 32px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  padding: 32px;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 32px;
+}
+
+.meme-image-container {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
